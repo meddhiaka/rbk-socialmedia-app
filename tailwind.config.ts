@@ -17,6 +17,7 @@ const config: Config = {
         cgray: '#FAFAFA',
         cwhite: '#FFFFFF',
         cpurple: '#613FE8',
+        clightpurple: '#EFECFF',
         github: '#191919',
         youtube: '#EF383A',
         linkedin: '#2D69FF'
