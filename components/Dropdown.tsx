@@ -23,9 +23,10 @@ const links = [
   }
 ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ');
 }
+
 
 export default function Dropdown() {
   const [selected, setSelected] = useState(links[1])
