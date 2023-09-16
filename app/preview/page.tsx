@@ -7,16 +7,17 @@ import {BsGithub} from "react-icons/bs"
 import {AiFillYoutube, AiFillLinkedin} from "react-icons/ai"
 
 export default function Page() {    
+    const { profilePicture } = useGlobalContext()
     return (
         <>
             <div className="bg-cpurple h-56 rounded-b-3xl">
                 <HeaderPreview />
                 <div className="flex justify-center relative top-20">
-                    <div className=" h-[360px] w-56 block bg-white rounded-xl shadow-xl">
+                    <div className=" h-[380px] w-56 block bg-white rounded-xl shadow-xl">
                         <div 
                             className="mx-auto h-24 w-24 bg-white rounded-full relative top-3 border-[4px] border-cpurple bg-transparent bg-cover shadow-lg bg-center bg-no-repeat"
                             style={{
-                                backgroundImage: `url('${localStorage.profilePicture}')`,
+                                backgroundImage: `url('${profilePicture}')`,
                             }}
                         >
 

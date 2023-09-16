@@ -7,6 +7,7 @@ export default function Screen() {
                     backgroundImage: `url('/smartphone.png')`
                 }}
             >
+                <p className="fixed top-44 left-28">u</p>
             </div>
         </div>
     )
