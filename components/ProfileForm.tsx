@@ -10,7 +10,6 @@ export default function ProfileForm() {
 
     const { firstName, setFirstName, lastName, setLastName, emailAddress, setEmailAdress, profilePicture, setProfilePicture } = useGlobalContext()
     const [imgOk, setImgOk] = useState(false)
-    console.log(profilePicture)
     return (
         <div className="bg-cwhite w-full md:w-3/5 h-400px p-5">
             <p className="text-2xl font-medium my-5">Profile Details</p>
