@@ -32,19 +32,19 @@ export default function Header() {
                 </Link>
                 <div className="flex h-9 gap-x-2">
                     
-                    <div className={activeUrl === '/' ? 'px-3 rounded-md bg-clightpurple flex items-center gap-1' : 'bg-cwhite flex items-center gap-1'}>
+                    <div className={activeUrl === '/' ? 'px-3 rounded-md bg-clightpurple flex items-center gap-1' : 'bg-cwhite flex items-center gap-1 px-3'}>
                         <Link href="/"><AiOutlineLink className={activeUrl === '/' ? "inline-block text-cpurple": "inline-block text-gray-500"}/></Link>
                         <Link href="/"><span className={activeUrl === '/' ? "text-xs text-cpurple font-semibold hidden md:inline-block ": 'text-xs text-gray-500 font-semibold hidden md:inline-block'}>Links</span></Link>
                     </div>
                     
-                    <div className={activeUrl === '/profile' ? 'px-3 rounded-md bg-clightpurple flex items-center gap-1' : 'bg-cwhite flex items-center gap-1'}>
+                    <div className={activeUrl === '/profile' ? 'px-3 rounded-md bg-clightpurple flex items-center gap-1' : 'bg-cwhite flex items-center gap-1 px-3'}>
                         <Link href="profile"><IoPersonCircleOutline className={activeUrl === '/profile' ? "inline-block text-cpurple": "inline-block text-gray-500"}/></Link>
                         <Link href="profile"><span className={activeUrl === '/profile' ? "text-xs text-cpurple font-semibold hidden md:inline-block ": 'text-xs text-gray-500 font-semibold hidden md:inline-block'}>Profile Details</span></Link>
                     </div>
                 </div>
                 <div className="px-3 rounded-md bg-cwhite flex items-center h-9 border border-cpurple hover:bg-clightpurple  cursor-pointer">
                         <Link href="/preview"><span className="text-xs text-cpurple font-semibold hidden md:inline-block">Preview</span></Link>
-                        <AiOutlineEye className="md:hidden text-cpurple" />
+                        <Link href="/preview"><AiOutlineEye className="md:hidden text-cpurple" /></Link>
                 </div>
             </div>
         </div>
