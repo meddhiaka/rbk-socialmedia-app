@@ -5,9 +5,16 @@ import HeaderPreview from "@/components/HeaderPreview"
 import { AiOutlineArrowRight } from "react-icons/ai"
 import {BsGithub} from "react-icons/bs"
 import {AiFillYoutube, AiFillLinkedin} from "react-icons/ai"
+import { useEffect } from "react"
 
 export default function Page() {
     const { profilePicture } = useGlobalContext()
+        let namex, lastnamex, emailx
+        useEffect(() => {
+            namex = localStorage.getItem('name')
+            lastnamex = localStorage.getItem('lastname')
+            emailx = localStorage.getItem('email')
+        }, [])
     return (
         <>
             <div className="bg-cpurple h-56 rounded-b-3xl">
@@ -22,8 +29,8 @@ export default function Page() {
                         >
 
                         </div>
-                        <p className="font-bold text-2xl text-center mt-4">{ localStorage.name === undefined ? 'First Name' : localStorage.name } { localStorage.lastname === undefined ? 'Last Name' : localStorage.lastname}</p>
-                        <p className="font-base text-xs text-gray-500 text-center mt-2">{ localStorage.email === undefined ? 'Email Address' : localStorage.email }</p>
+                        <p className="font-bold text-2xl text-center mt-4">{ namex === undefined ? 'First Name' : namex } { lastnamex === undefined ? 'Last Name' : lastnamex}</p>
+                        <p className="font-base text-xs text-gray-500 text-center mt-2">{ emailx === undefined ? 'Email Address' : emailx }</p>
                         <div className="cursor-pointer mx-auto bg-github w-48 p-2 mt-10 text-sm text-white rounded-md flex flex-row justify-between items-center">
                             <div>
                                 <BsGithub className="inline-block mr-1"/>
