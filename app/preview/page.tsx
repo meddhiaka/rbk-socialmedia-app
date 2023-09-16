@@ -6,7 +6,7 @@ import { AiOutlineArrowRight } from "react-icons/ai"
 import {BsGithub} from "react-icons/bs"
 import {AiFillYoutube, AiFillLinkedin} from "react-icons/ai"
 
-export default function Page() {    
+export default function Page() {
     const { profilePicture } = useGlobalContext()
     return (
         <>
@@ -22,8 +22,8 @@ export default function Page() {
                         >
 
                         </div>
-                        <p className="font-bold text-2xl text-center mt-4">{localStorage.name.length === 0 ? 'First Name' : localStorage.name } {localStorage.lastname.length === 0 ? 'Last Name' : localStorage.lastname}</p>
-                        <p className="font-base text-xs text-gray-500 text-center mt-2">{ localStorage.email.length === 0 ? 'Email Address' : localStorage.email }</p>
+                        <p className="font-bold text-2xl text-center mt-4">{ localStorage.name === undefined ? 'First Name' : localStorage.name } { localStorage.lastname === undefined ? 'Last Name' : localStorage.lastname}</p>
+                        <p className="font-base text-xs text-gray-500 text-center mt-2">{ localStorage.email === undefined ? 'Email Address' : localStorage.email }</p>
                         <div className="cursor-pointer mx-auto bg-github w-48 p-2 mt-10 text-sm text-white rounded-md flex flex-row justify-between items-center">
                             <div>
                                 <BsGithub className="inline-block mr-1"/>
