@@ -1,5 +1,5 @@
 'use client'
-
+import React, { ReactNode } from 'react';
 import { createContext, useContext, Dispatch, SetStateAction, useState } from 'react'
 
 interface ContextProps {
@@ -9,8 +9,8 @@ interface ContextProps {
     setLastName: Dispatch<SetStateAction<string>>,
     emailAddress: string,
     setEmailAdress: Dispatch<SetStateAction<string>>,
-    profilePicture: string | ArrayBuffer | null,
-    setProfilePicture: Dispatch<SetStateAction<string | ArrayBuffer | null>>,
+    profilePicture: string,
+    setProfilePicture: Dispatch<SetStateAction<string>>,
     links: {
         platformName: string,
         platformLink: string
@@ -33,12 +33,11 @@ const GlobalContext = createContext<ContextProps>({
     links: [],
     setLinks: () => { }
 })
-
-export const GlobalContextProvider = ({ children }) => {
+export const GlobalContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [firstName, setFirstName] = useState<string>('')
     const [lastName, setLastName] = useState<string>('')
     const [emailAddress, setEmailAdress] = useState<string>('')
-    const [profilePicture, setProfilePicture] = useState<string | ArrayBuffer | null>('')
+    const [profilePicture, setProfilePicture] = useState<string>('')
     const [links, setLinks] = useState<{
         platformName: string,
         platformLink: string }[]>([])

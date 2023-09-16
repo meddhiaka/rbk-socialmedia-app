@@ -1,7 +1,6 @@
 import { useGlobalContext } from "@/context/AppContext"
 import { use, useState } from "react"
 import { toast } from "react-toastify"
-import { useEffect } from "react"
 import { BsImage } from 'react-icons/bs'
 
 
@@ -29,9 +28,8 @@ export default function ProfileForm() {
                         <input 
                             type="file"
                             className="absolute inset-0 z-30 opacity-0 cursor-pointer"
-                            onChange={(e) => {
-
-                                const imgPreview = e.target.files[0]
+                            onChange={(e:any) => {
+                                const imgPreview = e.target ? e.target.files[0] : null;
                                 const fileExtension = e.target.files[0].name.split('.').pop().toLowerCase();
                                 
                                 if (!(fileExtension === "png" || fileExtension === "jpg" || fileExtension === "jpeg" || fileExtension === "bmp")) {
@@ -50,7 +48,7 @@ export default function ProfileForm() {
 
                                 if (imgPreview) {
                                     const reader = new FileReader();
-                                    reader.onload = (e) => {
+                                    reader.onload = (e:any) => {
                                       const img = new Image()
                                       img.src = e.target.result
                               
@@ -76,7 +74,12 @@ export default function ProfileForm() {
                                 const data = new FileReader()
 
                                 data.addEventListener('load', () => {
-                                    setProfilePicture(data.result)
+                                    if (data.result !== null) {
+                                        const resultString = (typeof data.result === 'string') ? data.result : new TextDecoder().decode(data.result);
+                                        setProfilePicture(resultString)
+                                    }
+                                        
+                                        
                                 })
                                 console.log(data.result)
                                 data.readAsDataURL(e.target.files[0])
