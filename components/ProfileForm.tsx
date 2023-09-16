@@ -9,6 +9,9 @@ export default function ProfileForm() {
 
     const { firstName, setFirstName, lastName, setLastName, emailAddress, setEmailAdress, profilePicture, setProfilePicture } = useGlobalContext()
     const [imgOk, setImgOk] = useState(false)
+    const [NameT, setNameT] = useState('')
+    const [LastNameT, setLastNameT] = useState('')
+    const [EmailT, setEmailT] = useState('')
     return (
         <div className="bg-cwhite w-full md:w-3/5 h-400px p-5">
             <p className="text-2xl font-medium my-5">Profile Details</p>
@@ -99,15 +102,15 @@ export default function ProfileForm() {
             >
                 <div className="flex flex-row justify-between items-center mb-4">
                     <label htmlFor="name" className="inline-block text-xs text-gray-700 font-light w-1/2 md:w-auto">First name*</label>
-                    <input type="text" value={firstName} id="name" onChange={(e) => setFirstName(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cpurple focus:border-cpurple inline-block w-80 p-2" placeholder="Put your first name" />
+                    <input type="text" value={firstName} id="name" onChange={(e) => setNameT(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cpurple focus:border-cpurple inline-block w-80 p-2" placeholder="Put your first name" />
                 </div>
                 <div className="flex flex-row justify-between items-center mb-4">
                     <label htmlFor="lastname" className="text-xs text-gray-700 font-light w-1/2 md:w-auto">Last name*</label>
-                    <input type="text" value={lastName} id="lastname" onChange={(e) => setLastName(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cpurple focus:border-cpurple inline-block w-80 p-2" placeholder="Put your last name" />
+                    <input type="text" value={lastName} id="lastname" onChange={(e) => setLastNameT(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cpurple focus:border-cpurple inline-block w-80 p-2" placeholder="Put your last name" />
                 </div>
                 <div className="flex flex-row justify-between items-center mb-4">
                     <label htmlFor="email" className="text-xs text-gray-700 font-light w-1/2 md:w-auto">Email name*</label>
-                    <input type="email" value={emailAddress} id="email" onChange={(e) => setEmailAdress(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cpurple focus:border-cpurple inline-block w-80 p-2" placeholder="name@email.domain" />
+                    <input type="email" value={emailAddress} id="email" onChange={(e) => setEmailT(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cpurple focus:border-cpurple inline-block w-80 p-2" placeholder="name@email.domain" />
                 </div>
             </form>
             <div className="flex justify-end border-[1px] border-t-gray-300 border-white pt-2 mb-5">
@@ -173,9 +176,9 @@ export default function ProfileForm() {
                             return
                         }
 
-                        localStorage.setItem('name', firstName)
-                        localStorage.setItem('lastname', lastName)
-                        localStorage.setItem('email', emailAddress)
+                        setFirstName(NameT)
+                        setLastName(LastNameT)
+                        setEmailAdress(EmailT)
                         
                         setImgOk(false)
                         

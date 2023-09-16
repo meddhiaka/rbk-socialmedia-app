@@ -8,6 +8,8 @@ export default function LinksForm() {
             <button className="w-full py-1 my-3 rounded-md bg-transparent h-9 border border-cpurple text-xs text-cpurple font-semibold">+ Add new link</button>
             <div>
                 <AddLinkComponent />
+                <AddLinkComponent />
+                <AddLinkComponent />
             </div>
             <div className="flex justify-end border-[1px] border-t-gray-300 border-white py-2">
                 <div className="px-3 mr-3 rounded-md bg-cpurple hover:bg-purple-900 flex items-center h-9 border border-cpurple   cursor-pointer">
