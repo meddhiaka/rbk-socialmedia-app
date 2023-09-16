@@ -10,21 +10,6 @@ export default function ProfileForm() {
 
     const { firstName, setFirstName, lastName, setLastName, emailAddress, setEmailAdress, profilePicture, setProfilePicture } = useGlobalContext()
     const [imgOk, setImgOk] = useState(false)
-    // console.log(e.target.files)
-    // const data = new FileReader()
-    // data.addEventListener('load', () => {
-    //     setProfilePicture(data.result)
-    // }
-
-
-                // <div 
-                //     className="w-4/5 bg-contain h-[450px] bg-center bg-no-repeat relative"
-                //     style={{
-                //         backgroundImage: `url('/smartphone.png')`
-                //     }}
-                // >
-                //     <p className="fixed top-44 left-28">u</p>
-                // </div>
     console.log(profilePicture)
     return (
         <div className="bg-cwhite w-full md:w-3/5 h-400px p-5">
