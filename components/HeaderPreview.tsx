@@ -10,9 +10,12 @@ export default function HeaderPreview() {
                     </Link>
                 </div>
                 <div className="px-3 mr-3 rounded-md bg-cpurple hover:bg-purple-900 flex items-center h-9 border border-cpurple   cursor-pointer">
-                    <Link href="/">
+                    <div
+                        className="cursor-pointer"
+                        onClick={() => alert('mch 9olt front khw :)')}
+                    >
                         <span className="text-xs w-full text-clightpurple  font-semibold inline-block">Share Link</span>
-                    </Link>
+                    </div>
                 </div>
         </div>
     )
