@@ -5,9 +5,9 @@ import Screen from "@/components/Screen"
 
 export default function Page() {
     return (
-        <div>
+        <div className="flex flex-col gap-2">
             <Header />
-            <div className="flex gap-x-3 mt-5">
+            <div className="flex gap-x-3">
                 <Screen />
                 <ProfileForm />
             </div>

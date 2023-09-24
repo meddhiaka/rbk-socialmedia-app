@@ -10,11 +10,11 @@ export default function ProfileForm() {
     const { firstName, setFirstName, lastName, setLastName, emailAddress, setEmailAdress, profilePicture, setProfilePicture } = useGlobalContext()
     const [imgOk, setImgOk] = useState(false)
     return (
-        <div className="bg-cwhite w-full md:w-3/5 h-400px p-5">
+        <div className="bg-cwhite rounded-lg w-full md:w-3/5 p-5">
             <p className="text-2xl font-medium my-5">Profile Details</p>
             <p className="text-xs font-light">Add your details to create a personal touch to your profile.</p>
-            <div className="mt-4 bg-cgray p-4 rounded-md flex  flex-col md:flex-row  items-center justify-between">
-                <p className="mb-3 font-light text-xs">Profile Picture</p>
+            <div className="mt-4 bg-cgray p-4 rounded-md flex  flex-col md:flex-row items-center justify-between">
+                <p className="mb-4 font-light text-xs">Profile Picture</p>
                 <div className="flex flex-row">
                     <div 
                         className="w-36 h-36 bg-transparent rounded-md relative bg-cover shadow-lg bg-center bg-no-repeat"
@@ -88,7 +88,7 @@ export default function ProfileForm() {
                             }}
                         />
                     </div>
-                    <div className="flex flex-col justify-center mx-1 w-4/5 ml-2 m-1">
+                    <div className="flex flex-col justify-center mx-1 w-[80%] md:w-4/5 md:ml-6 ml-3 m-1">
                         <p className="text-xs text-gray-600 font-light">Image must be below 1024x1024px.</p>
                         <p className="text-xs text-gray-600 font-light">Use PNG, JPG or BMP format.</p>
                     </div>

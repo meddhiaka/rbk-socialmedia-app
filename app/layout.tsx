@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-cgray m-2 mb-6`}>
         <GlobalContextProvider>{children}</GlobalContextProvider>
         <ToastContainer
           position="bottom-center"

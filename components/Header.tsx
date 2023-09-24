@@ -13,11 +13,12 @@ export default function Header() {
     const [activeUrl, setActiveUrl] = useState('');
   
     useEffect(() => {
-      setActiveUrl(pathname);
-    }, [pathname]);
+      setActiveUrl(pathname)
+    }, [pathname])
+
     return (
-        <div className="rounded-lg m-3 bg-cwhite z-2">
-            <div className="h-16 flex row justify-between items-center">
+        <div className="rounded-lg px-2 py-1 bg-cwhite z-2">
+            <div className=" h-14 flex row justify-between items-center">
                 <Link href="/">
                     <div className=" flex gap-x-1 items-center">
                         <Image 

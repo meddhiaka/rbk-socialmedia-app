@@ -5,9 +5,9 @@ import LinksForm from "@/components/LinksForm"
 
 export default function Home() {
   return (
-    <main className="bg-cgray mx-3 h-full">
+    <main className="flex flex-col gap-2">
       <Header/>
-      <div className="flex gap-x-3 mt-5">
+      <div className="flex gap-x-3">
         <Screen/>
         <LinksForm/>
       </div>
